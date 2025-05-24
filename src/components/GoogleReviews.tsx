@@ -23,9 +23,11 @@ export default function GoogleReviews() {
   return (
     <section className="p-4">
       <div className="text-center mb-6">
-        <div className="bg-gray-200 h-12 rounded-lg mx-auto w-32 mb-4 flex items-center justify-center">
-          <span className="text-gray-500 text-sm">Google</span>
-        </div>
+        <img 
+          src="/images/google.png" 
+          alt="Google Logo" 
+          className="h-12 w-32 mx-auto mb-4 object-contain" 
+        />
         <h2 className="text-xl font-bold">What Our Patients Say</h2>
       </div>
 

@@ -7,24 +7,24 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "What is the dental implant procedure like?",
-      answer: "The procedure involves placing a titanium implant into the jawbone, allowing it to fuse with the bone over time. This serves as a stable foundation for a prosthetic tooth. The process includes a consultation, implant placement, a healing period, and finally, the attachment of a customized crown."
+      question: "How long does a dental implant procedure take?",
+      answer: "Typically, 2-3 visits over 3 months, depending on bone health. Some cases can be done faster with same-day crowns."
     },
     {
-      question: "Am I a suitable candidate for dental implants?",
-      answer: "Your overall health, bone density, and oral hygiene will be assessed to determine your candidacy for dental implants. A thorough examination will help us understand if implants are viable for you."
+      question: "Is the treatment painful?",
+      answer: "No. All treatments are performed under local anesthesia with added comfort measures. We also specialize in painless root canals."
     },
     {
-      question: "Are there any risks or complications associated with dental implants?",
-      answer: "Like any surgical procedure, there are potential risks, such as infection or implant failure. However, these occurrences are rare. We will discuss these risks and take necessary precautions to minimize potential complications."
+      question: "Are aligners better than braces?",
+      answer: "Yes, for most mild-to-moderate cases. Aligners are invisible, removable, and easier to manage."
     },
     {
-      question: "What is the expected recovery time, and how should I care for the implant afterward?",
-      answer: "Immediate recovery times varies generally between 24-48 hrs depending on procedure. It's crucial to follow post-operative care instructions, including oral hygiene, a soft diet, and any prescribed medications to ensure a successful recovery."
+      question: "How often should I visit the dentist?",
+      answer: "We recommend every 6 months for a check-up and cleaning—even if you have no symptoms."
     },
     {
-      question: "Is the dental implant procedure painful?",
-      answer: "No, the procedure is performed under local anesthesia, ensuring you won't feel pain during the surgery. Any discomfort afterward can typically be managed with prescribed pain medication."
+      question: "Do you offer treatments for senior citizens or kids?",
+      answer: "Yes, we offer complete family dentistry—from kids' cavities to full-mouth rehab for seniors."
     }
   ];
 

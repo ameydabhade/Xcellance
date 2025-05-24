@@ -18,17 +18,6 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
         />
       </div>
 
-      <div className="flex flex-col gap-3 mb-8">
-        <button onClick={onBookAppointment} className="bg-yellow-400 text-blue-900 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors">
-          📞 Book FREE Consultation
-        </button>
-        <a 
-          href="tel:+919175682823" 
-          className="bg-blue-800 text-white py-4 rounded-lg font-bold text-lg text-center hover:bg-blue-900 transition-colors"
-        >
-          CALL NOW ☏
-        </a>
-      </div>
 
       {/* Special Offer Section */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 rounded-xl text-center mb-6">
@@ -43,6 +32,17 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
         >
           🎉 Get Offer Now
         </button>
+      </div>
+      <div className="flex flex-col gap-3 mb-8">
+        <button onClick={onBookAppointment} className="bg-yellow-400 text-blue-900 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors">
+          📞 Book FREE Consultation
+        </button>
+        <a 
+          href="tel:+919175682823" 
+          className="bg-blue-800 text-white py-4 rounded-lg font-bold text-lg text-center hover:bg-blue-900 transition-colors"
+        >
+          CALL NOW ☏
+        </a>
       </div>
 
       {/* Why Choose Us Section */}
