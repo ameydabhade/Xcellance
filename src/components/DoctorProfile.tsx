@@ -21,6 +21,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
                 fill
                 className="object-cover rounded-lg" 
               />
+              
             </div>
             <h3 className="text-xl md:text-2xl font-bold text-blue-600">Dr. Kavitarani Rudagi</h3>
             <p className="text-orange-500 font-medium">Founder & Chief Endodontist</p>
