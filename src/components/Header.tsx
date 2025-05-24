@@ -6,9 +6,11 @@ export default function Header({ onBookAppointment }: HeaderProps) {
   return (
     <header className="bg-white shadow-sm p-4">
       <div className="text-center">
-        <div className="w-20 h-20 bg-gray-200 rounded-lg mx-auto mb-4 flex items-center justify-center">
-          <span className="text-gray-500 text-xs">Logo</span>
-        </div>
+        <img 
+          src="/images/logo.png" 
+          alt="Dr. Rudagi's Dental Centre of Excellence Logo" 
+          className="w-48 h-auto mx-auto mb-4"
+        />
         <p className="text-sm text-blue-600 mb-4">
           📍 Shop 43, First Floor, Kohinoor Grandeur, Mukai Chowk, Ravet, Pimpri 412101
         </p>
