@@ -1,3 +1,7 @@
+'use client';
+
+import Image from 'next/image';
+
 interface TransformingSmilesProps {
   onBookAppointment: () => void;
 }
@@ -15,20 +19,26 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[1, 2, 3].map((i) => (
           <div key={i} className="bg-gray-200 rounded-lg h-48 md:h-64 flex items-center justify-center gap-4 p-4">
-            <div className="flex-1 h-full flex flex-col items-center justify-center">
-              <img 
-                src={`/images/transform/before${i}.png`} 
-                alt={`Before Smile ${i}`} 
-                className="h-full object-cover rounded shadow"
-              />
+            <div className="flex-1 h-full flex flex-col items-center justify-center relative">
+              <div className="relative w-full h-full">
+                <Image 
+                  src={`/images/transform/before${i}.png`} 
+                  alt={`Before Smile ${i}`} 
+                  fill
+                  className="object-cover rounded shadow"
+                />
+              </div>
               <span className="text-xs md:text-sm mt-2 text-gray-600">Before</span>
             </div>
-            <div className="flex-1 h-full flex flex-col items-center justify-center">
-              <img 
-                src={`/images/transform/after${i}.png`} 
-                alt={`After Smile ${i}`} 
-                className="h-full object-cover rounded shadow"
-              />
+            <div className="flex-1 h-full flex flex-col items-center justify-center relative">
+              <div className="relative w-full h-full">
+                <Image 
+                  src={`/images/transform/after${i}.png`} 
+                  alt={`After Smile ${i}`} 
+                  fill
+                  className="object-cover rounded shadow"
+                />
+              </div>
               <span className="text-xs md:text-sm mt-2 text-gray-600">After</span>
             </div>
           </div>

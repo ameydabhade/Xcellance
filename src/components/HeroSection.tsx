@@ -1,3 +1,7 @@
+'use client';
+
+import Image from 'next/image';
+
 interface HeroSectionProps {
   onBookAppointment: () => void;
 }
@@ -12,10 +16,11 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
 
       <div className="md:flex md:items-center md:gap-8 md:mb-12">
         <div className="relative rounded-lg h-48 md:h-[400px] mb-6 md:mb-0 md:flex-1 overflow-hidden shadow-lg">
-          <img 
+          <Image 
             src="/images/hero.png" 
             alt="Dental Implant Showcase" 
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
         </div>
 
@@ -50,7 +55,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
       {/* Why Choose Us Section */}
       <div className="mb-8">
         <h3 className="text-xl md:text-3xl font-bold text-center text-gray-900 mb-6">
-          Why choose <span className="text-blue-600">Dr. Rudagi's Dental Centre?</span>
+          Why choose <span className="text-blue-600">Dr. Rudagi&apos;s Dental Centre?</span>
         </h3>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-6">
@@ -63,7 +68,9 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
             { icon: "/images/heroicons/tech.png", title: "Advanced Technology", desc: "iTero Scanner & More" }
           ].map((usp, index) => (
             <div key={index} className="text-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow md:p-6">
-              <img src={usp.icon} alt={usp.title} className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2" />
+              <div className="relative w-10 h-10 md:w-12 md:h-12 mx-auto mb-2">
+                <Image src={usp.icon} alt={usp.title} fill className="object-contain" />
+              </div>
               <h4 className="font-bold text-sm md:text-base text-gray-900 mb-1">{usp.title}</h4>
               <p className="text-xs md:text-sm text-gray-600">{usp.desc}</p>
             </div>
@@ -88,7 +95,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-500">✔</span>
-            <span className="text-sm md:text-base">Using one of the world's best <strong>German</strong> implant system with Digital implantology</span>
+            <span className="text-sm md:text-base">Using one of the world&apos;s best <strong>German</strong> implant system with Digital implantology</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-500">✔</span>

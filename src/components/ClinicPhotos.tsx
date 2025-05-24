@@ -1,3 +1,7 @@
+'use client';
+
+import Image from 'next/image';
+
 interface ClinicPhotosProps {
   onBookAppointment: () => void;
 }
@@ -7,12 +11,13 @@ export default function ClinicPhotos({ onBookAppointment }: ClinicPhotosProps) {
     <section className="bg-blue-50 p-4">
       <div className="grid grid-cols-2 gap-3 mb-6">
         {[1, 2, 3, 4].map((i) => (
-          <div key={i} className="bg-gray-200 rounded-lg h-24 flex items-center justify-center overflow-hidden">
+          <div key={i} className="bg-gray-200 rounded-lg h-24 flex items-center justify-center overflow-hidden relative">
             {i <= 4 ? (
-              <img 
+              <Image 
                 src={`/images/clinic/${i}.png`} 
                 alt={`Clinic Photo ${i}`} 
-                className="w-full h-full object-cover" 
+                fill
+                className="object-cover" 
               />
             ) : (
               <span className="text-gray-500 text-sm">Clinic Photo {i}</span>

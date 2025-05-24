@@ -1,3 +1,7 @@
+'use client';
+
+import Image from 'next/image';
+
 interface DoctorProfileProps {
   onBookAppointment: () => void;
 }
@@ -10,8 +14,13 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
       <div className="bg-white rounded-lg p-4 md:p-8 shadow-sm max-w-6xl mx-auto">
         <div className="md:flex md:gap-8 md:items-start mb-8">
           <div className="text-center mb-6 md:mb-0 md:flex-shrink-0">
-            <div className="w-48 h-48 md:w-64 md:h-64 bg-gray-200 rounded-lg mx-auto mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/images/doctor.png" alt="Dr. Kavitarani Rudagi" className="w-full h-full object-cover rounded-lg" />
+            <div className="w-48 h-48 md:w-64 md:h-64 bg-gray-200 rounded-lg mx-auto mb-4 flex items-center justify-center overflow-hidden relative">
+              <Image 
+                src="/images/doctor.png" 
+                alt="Dr. Kavitarani Rudagi" 
+                fill
+                className="object-cover rounded-lg" 
+              />
             </div>
             <h3 className="text-xl md:text-2xl font-bold text-blue-600">Dr. Kavitarani Rudagi</h3>
             <p className="text-orange-500 font-medium">Founder & Chief Endodontist</p>
@@ -19,7 +28,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
 
           <div className="space-y-4 text-gray-700 md:flex-grow">
             <p className="md:text-lg">
-              Dr. Kavitarani Rudagi is the Founder & Chief Endodontist at Dr. Rudagi's Dental Centre of Xcellence, 
+              Dr. Kavitarani Rudagi is the Founder & Chief Endodontist at Dr. Rudagi&apos;s Dental Centre of Xcellence, 
               with an extensive experience of 15+ years.
             </p>
             

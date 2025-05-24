@@ -19,7 +19,7 @@ export default function CTABox({ onBookAppointment }: CTABoxProps) {
       </p>
 
       <p className="text-yellow-300 mb-6 text-center font-bold">
-        <em>"ONLY VALID FOR FIRST 10 PATIENTS"</em>
+        <em>&ldquo;ONLY VALID FOR FIRST 10 PATIENTS&rdquo;</em>
       </p>
 
       <button onClick={onBookAppointment} className="bg-yellow-400 text-blue-900 py-3 px-6 rounded-lg font-bold w-full">
