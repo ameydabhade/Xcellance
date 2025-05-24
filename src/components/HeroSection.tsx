@@ -10,8 +10,12 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
         <span className="text-blue-600">Confident Smile!</span>
       </h1>
 
-      <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg h-48 md:h-64 mb-6 flex items-center justify-center shadow-lg">
-        <span className="text-gray-500 font-medium">Dental Implant Showcase</span>
+      <div className="relative rounded-lg h-48 md:h-64 mb-6 overflow-hidden shadow-lg">
+        <img 
+          src="/images/hero.png" 
+          alt="Dental Implant Showcase" 
+          className="w-full h-full object-cover"
+        />
       </div>
 
       <div className="flex flex-col gap-3 mb-8">
