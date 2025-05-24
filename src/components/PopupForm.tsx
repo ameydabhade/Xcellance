@@ -26,10 +26,10 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
           <button onClick={onClose} className="text-gray-500 hover:text-gray-700 text-2xl">×</button>
         </div>
         
-        <div className="bg-blue-50 p-3 rounded-lg mb-4 border-l-4 border-orange-400">
+        <div className="bg-blue-50 p-3 rounded-lg mb-4 border-l-4 border-blue-200">
           <p className="text-sm text-blue-600 text-center">
             <strong>Includes:</strong> Free Consultation & Digital scan
-            <span className="text-orange-500 font-bold"> Worth ₹1,000</span>
+            <span className="text-orange-300 font-bold"> Worth ₹1,000</span>
           </p>
         </div>
 

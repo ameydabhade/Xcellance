@@ -53,15 +53,15 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
         
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
           {[
-            { icon: "🏆", title: "15+ Years Experience", desc: "Expert Endodontist" },
-            { icon: "😌", title: "Painless Procedure", desc: "Advanced Anesthesia" },
-            { icon: "🛡️", title: "Premium Implants", desc: "International Quality" },
-            { icon: "👥", title: "Specialist Team", desc: "Qualified Doctors" },
-            { icon: "🧼", title: "100% Sterilization", desc: "Highest Safety Standards" },
-            { icon: "🔬", title: "Advanced Technology", desc: "iTero Scanner & More" }
+            { icon: "/images/heroicons/Experience.png", title: "15+ Years Experience", desc: "Expert Endodontist" },
+            { icon: "/images/heroicons/painless.png", title: "Painless Procedure", desc: "Advanced Anesthesia" },
+            { icon: "/images/heroicons/premium.png", title: "Premium Implants", desc: "International Quality" },
+            { icon: "/images/heroicons/team.png", title: "Specialist Team", desc: "Qualified Doctors" },
+            { icon: "/images/heroicons/sterilization.png", title: "100% Sterilization", desc: "Highest Safety Standards" },
+            { icon: "/images/heroicons/tech.png", title: "Advanced Technology", desc: "iTero Scanner & More" }
           ].map((usp, index) => (
             <div key={index} className="text-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-3xl mb-2">{usp.icon}</div>
+              <img src={usp.icon} alt={usp.title} className="w-10 h-10 mx-auto mb-2" />
               <h4 className="font-bold text-sm md:text-base text-gray-900 mb-1">{usp.title}</h4>
               <p className="text-xs md:text-sm text-gray-600">{usp.desc}</p>
             </div>

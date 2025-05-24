@@ -2,7 +2,7 @@ export default function ImplantTypes() {
   const implantData = [
     {
       title: "Single Implants",
-      image: "Single Implant",
+      image: "/images/implant/single.png",
       description: "A Single dental implant crown is your ideal solution. It will:",
       benefits: [
         "Look and function just like a natural tooth",
@@ -13,7 +13,7 @@ export default function ImplantTypes() {
     },
     {
       title: "Multiple Implants", 
-      image: "Multi Implant",
+      image: "/images/implant/Multiple.png",
       description: "A Multi-implant bridge. It is ideal for filling medium-sized gaps in your smile.",
       benefits: [
         "Exceptional Strength",
@@ -24,7 +24,7 @@ export default function ImplantTypes() {
     },
     {
       title: "Implant-Supported Dentures",
-      image: "Implant Dentures", 
+      image: "/images/implant/supported.png", 
       description: "offer a stable alternative to regular dentures.",
       benefits: [
         "Snap into place over 2-4 implants",
@@ -34,7 +34,7 @@ export default function ImplantTypes() {
     },
     {
       title: "All-on-4 / All-on-6",
-      image: "All on 4",
+      image: "/images/implant/all_in.png",
       description: "All-on-4 & All-on-6 Dental Implants provide extra stability and support:",
       benefits: [
         "Resistant to wear and stains",
@@ -58,8 +58,8 @@ export default function ImplantTypes() {
       <div className="space-y-6">
         {implantData.map((implant, index) => (
           <div key={index} className="bg-white text-gray-800 p-4 rounded-lg">
-            <div className="bg-gray-200 h-32 rounded-lg mb-4 flex items-center justify-center">
-              <span className="text-gray-500">{implant.image}</span>
+            <div className="bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+              <img src={implant.image} alt={implant.title} className="h-full w-full object-cover" />
             </div>
             <h3 className="font-bold text-center mb-3">{implant.title}</h3>
             <p className="text-center mb-3">{implant.description}</p>
