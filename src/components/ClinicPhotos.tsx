@@ -8,7 +8,7 @@ export default function ClinicPhotos({ onBookAppointment }: ClinicPhotosProps) {
       <div className="grid grid-cols-2 gap-3 mb-6">
         {[1, 2, 3, 4].map((i) => (
           <div key={i} className="bg-gray-200 rounded-lg h-24 flex items-center justify-center overflow-hidden">
-            {i <= 3 ? (
+            {i <= 4 ? (
               <img 
                 src={`/images/clinic/${i}.png`} 
                 alt={`Clinic Photo ${i}`} 
