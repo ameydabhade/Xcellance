@@ -9,8 +9,8 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
 
       <div className="bg-white rounded-lg p-4 shadow-sm">
         <div className="text-center mb-6">
-          <div className="w-32 h-32 bg-gray-200 rounded-lg mx-auto mb-4 flex items-center justify-center">
-            <span className="text-gray-500">Dr. Photo</span>
+          <div className="w-48 h-48 bg-gray-200 rounded-lg mx-auto mb-4 flex items-center justify-center">
+            <img src="/images/doctor.png" alt="Dr. Kavitarani Rudagi" className="w-full h-full object-cover rounded-lg" />
           </div>
           <h3 className="text-xl font-bold text-blue-600">Dr. Kavitarani Rudagi</h3>
           <p className="text-orange-500 font-medium">Founder & Chief Endodontist</p>
