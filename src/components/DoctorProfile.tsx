@@ -19,7 +19,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
 
           <div className="space-y-4 text-gray-700 md:flex-grow">
             <p className="md:text-lg">
-              Dr. Kavitarani Rudagi is the Founder & Chief Endodontist at Dr. Rudagi's Dental Centre of Xcellence, 
+              Dr. Kavitarani Rudagi is the Founder & Chief Endodontist at Dr. Rudagi&apos;s Dental Centre of Xcellence, 
               with an extensive experience of 15+ years.
             </p>
             

@@ -49,10 +49,10 @@ export default function ImplantTypes() {
     <section className="bg-blue-600 text-white p-4 md:p-8 lg:p-12 pb-16">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl md:text-4xl font-bold text-center text-yellow-300 mb-4">
-          When it comes to Dental Implants, choose <em>Dr. Rudagi's Dental Centre</em>
+          When it comes to Dental Implants, choose <em>Dr. Rudagi&apos;s Dental Centre</em>
         </h2>
         <p className="text-center text-blue-100 mb-8 md:text-lg max-w-3xl mx-auto">
-          At Dr. Rudagi's Dental Centre, we specialize in providing all types of dental implants 
+          At Dr. Rudagi&apos;s Dental Centre, we specialize in providing all types of dental implants 
           to help you achieve a beautiful and functional smile using the latest procedures and technology.
         </p>
 

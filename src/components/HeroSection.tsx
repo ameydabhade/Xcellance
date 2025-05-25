@@ -50,7 +50,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
       {/* Why Choose Us Section */}
       <div className="mb-8">
         <h3 className="text-xl md:text-3xl font-bold text-center text-gray-900 mb-6">
-          Why choose <span className="text-blue-600">Dr. Rudagi's Dental Centre?</span>
+          Why choose <span className="text-blue-600">Dr. Rudagi&apos;s Dental Centre?</span>
         </h3>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-6">
@@ -88,7 +88,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-500">✔</span>
-            <span className="text-sm md:text-base">Using one of the world's best <strong>German</strong> implant system with Digital implantology</span>
+            <span className="text-sm md:text-base">Using one of the world&apos;s best <strong>German</strong> implant system with Digital implantology</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-green-500">✔</span>
