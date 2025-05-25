@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 // Import all components
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import TrustSignals from "@/components/TrustSignals";
 import ImplantTypes from "@/components/ImplantTypes";
 import TransformingSmiles from "@/components/TransformingSmiles";
 import CTABox from "@/components/CTABox";
@@ -103,7 +102,7 @@ export default function Home() {
       <div className="relative z-10">
         <Header onBookAppointment={openPopup} />
         <HeroSection onBookAppointment={openPopup} />
-        <TrustSignals />
+      
         <ImplantTypes />
         <TransformingSmiles onBookAppointment={openPopup} />
         <CTABox onBookAppointment={openPopup} />
