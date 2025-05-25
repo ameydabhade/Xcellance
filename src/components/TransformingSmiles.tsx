@@ -20,7 +20,7 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
                 <img 
                   src={`/images/results/${i}before.png`} 
                   alt={`Before Smile ${i}`} 
-                  className="w-full h-64 object-cover rounded shadow"
+                  className={`w-full ${i <= 2 ? 'h-40 md:h-48 object-contain' : 'h-64 object-cover'} rounded shadow`} 
                 />
                 <span className="text-sm mt-2 text-gray-600">Before</span>
               </div>
@@ -28,7 +28,7 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
                 <img 
                   src={`/images/results/${i}after.png`} 
                   alt={`After Smile ${i}`} 
-                  className="w-full h-64 object-cover rounded shadow"
+                  className={`w-full ${i <= 2 ? 'h-40 md:h-48 object-contain' : 'h-64 object-cover'} rounded shadow`} 
                 />
                 <span className="text-sm mt-2 text-gray-600">After</span>
               </div>
