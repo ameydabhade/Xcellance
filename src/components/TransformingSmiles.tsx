@@ -13,12 +13,12 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
       </p>
 
       <div className="grid md:grid-cols-2 gap-6">
-        {[1, 2].map((i) => (
+        {[1, 2, 3, 4].map((i) => (
           <div key={i} className="bg-gray-200 rounded-lg p-4">
             <div className="flex flex-col gap-4">
               <div className="flex flex-col items-center">
                 <img 
-                  src={`/images/results/${i}before.JPG`} 
+                  src={`/images/results/${i}before.png`} 
                   alt={`Before Smile ${i}`} 
                   className="w-full h-64 object-cover rounded shadow"
                 />
@@ -26,7 +26,7 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
               </div>
               <div className="flex flex-col items-center">
                 <img 
-                  src={`/images/results/${i}after.JPG`} 
+                  src={`/images/results/${i}after.png`} 
                   alt={`After Smile ${i}`} 
                   className="w-full h-64 object-cover rounded shadow"
                 />
