@@ -1,7 +1,6 @@
 // Export all components
 export { default as Header } from './Header';
 export { default as HeroSection } from './HeroSection';
-export { default as TrustSignals } from './TrustSignals';
 export { default as ImplantTypes } from './ImplantTypes';
 export { default as TransformingSmiles } from './TransformingSmiles';
 export { default as CTABox } from './CTABox';
