@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function GoogleReviews() {
   const reviews = [
     {
@@ -26,11 +24,9 @@ export default function GoogleReviews() {
     <section className="p-4 md:p-8 lg:p-12">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-6 md:mb-10">
-          <Image 
+          <img 
             src="/images/google.png" 
             alt="Google Logo" 
-            width={128}
-            height={48}
             className="h-12 w-32 mx-auto mb-4 object-contain" 
           />
           <h2 className="text-xl md:text-3xl font-bold">What Our Patients Say</h2>
