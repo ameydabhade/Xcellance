@@ -1,11 +1,15 @@
+import Image from 'next/image';
+
 export default function Footer() {
   return (
     <footer className="bg-gray-100 p-4 md:p-8 lg:p-12">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-6 md:mb-12">
-          <img 
+          <Image 
             src="/images/logo.png" 
             alt="Dr. Rudagi's Dental Centre of Excellence Logo" 
+            width={192}
+            height={96}
             className="w-32 md:w-48 h-auto mx-auto mb-4"
           />
         </div>

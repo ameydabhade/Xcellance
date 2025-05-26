@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface HeroSectionProps {
   onBookAppointment: () => void;
 }
@@ -12,9 +14,11 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
 
       <div className="md:flex md:items-center md:gap-8 md:mb-12">
         <div className="relative rounded-lg h-48 md:h-[400px] mb-6 md:mb-0 md:flex-1 overflow-hidden shadow-lg">
-          <img 
+          <Image 
             src="/images/hero.png" 
             alt="Dental Implant Showcase" 
+            width={800}
+            height={400}
             className="w-full h-full object-cover"
           />
         </div>
@@ -63,7 +67,7 @@ export default function HeroSection({ onBookAppointment }: HeroSectionProps) {
             { icon: "/images/heroicons/tech.png", title: "Advanced Technology", desc: "iTero Scanner & More" }
           ].map((usp, index) => (
             <div key={index} className="text-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow md:p-6">
-              <img src={usp.icon} alt={usp.title} className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2" />
+              <Image src={usp.icon} alt={usp.title} width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2" />
               <h4 className="font-bold text-sm md:text-base text-gray-900 mb-1">{usp.title}</h4>
               <p className="text-xs md:text-sm text-gray-600">{usp.desc}</p>
             </div>

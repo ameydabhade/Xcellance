@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function ImplantTypes() {
   const implantData = [
     {
@@ -60,7 +62,13 @@ export default function ImplantTypes() {
           {implantData.map((implant, index) => (
             <div key={index} className="bg-white text-gray-800 p-4 md:p-6 rounded-lg">
               <div className="bg-gray-200 rounded-lg mb-4 h-48 md:h-64 flex items-center justify-center overflow-hidden">
-                <img src={implant.image} alt={implant.title} className="h-full w-full object-cover" />
+                <Image 
+                  src={implant.image} 
+                  alt={implant.title} 
+                  width={400}
+                  height={256}
+                  className="h-full w-full object-cover" 
+                />
               </div>
               <h3 className="font-bold text-center mb-3 md:text-lg">{implant.title}</h3>
               <p className="text-center mb-3 text-sm md:text-base">{implant.description}</p>
