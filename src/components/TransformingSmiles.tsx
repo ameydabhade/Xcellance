@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface TransformingSmilesProps {
   onBookAppointment: () => void;
 }
@@ -16,18 +18,22 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
         {[1, 2, 3, 4].map((i) => (
           <div key={i} className="bg-gray-200 rounded-lg p-4">
             <div className="flex flex-col gap-4">
-              <div className="flex flex-col items-center">
-                <img 
+              <div className="flex flex-col items-center sm-h-2">
+                <Image 
                   src={`/images/results/${i}before.png`} 
-                  alt={`Before Smile ${i}`} 
+                  alt={`Before Smile ${i}`}
+                  width={500}
+                  height={300}
                   className={`w-full ${i <= 2 ? 'h-40 md:h-48 object-contain' : 'h-64 object-cover'} rounded shadow`} 
                 />
                 <span className="text-sm mt-2 text-gray-600">Before</span>
               </div>
               <div className="flex flex-col items-center">
-                <img 
+                <Image 
                   src={`/images/results/${i}after.png`} 
-                  alt={`After Smile ${i}`} 
+                  alt={`After Smile ${i}`}
+                  width={500}
+                  height={300}
                   className={`w-full ${i <= 2 ? 'h-40 md:h-48 object-contain' : 'h-64 object-cover'} rounded shadow`} 
                 />
                 <span className="text-sm mt-2 text-gray-600">After</span>
