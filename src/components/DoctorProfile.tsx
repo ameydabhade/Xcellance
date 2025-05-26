@@ -11,7 +11,7 @@ export default function DoctorProfile({ onBookAppointment }: DoctorProfileProps)
         <div className="md:flex md:gap-8 md:items-start mb-8">
           <div className="text-center mb-6 md:mb-0 md:flex-shrink-0">
             <div className="w-48 h-48 md:w-64 md:h-64 bg-gray-200 rounded-lg mx-auto mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/images/doctor.png" alt="Dr. Kavitarani Rudagi" className="w-full h-full object-cover rounded-lg" />
+              <img src="/doc.png" alt="Dr. Kavitarani Rudagi" className="w-full h-full object-cover rounded-lg" />
             </div>
             <h3 className="text-xl md:text-2xl font-bold text-blue-600">Dr. Kavitarani Rudagi</h3>
             <p className="text-orange-500 font-medium">Founder & Chief Endodontist</p>
