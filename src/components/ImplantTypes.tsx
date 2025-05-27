@@ -59,8 +59,8 @@ export default function ImplantTypes() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {implantData.map((implant, index) => (
             <div key={index} className="bg-white text-gray-800 p-4 md:p-6 rounded-lg">
-              <div className="bg-gray-200 rounded-lg mb-4 h-48 md:h-64 flex items-center justify-center overflow-hidden">
-                <img src={implant.image} alt={implant.title} className="h-full w-full object-cover" />
+              <div className="bg-white rounded-lg mb-4 h-40 md:h-64 flex items-center justify-center">
+                <img src={implant.image} alt={implant.title} className="w-full h-full rounded-lg object-contain" />
               </div>
               <h3 className="font-bold text-center mb-3 md:text-lg">{implant.title}</h3>
               <p className="text-center mb-3 text-sm md:text-base">{implant.description}</p>
