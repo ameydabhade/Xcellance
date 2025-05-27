@@ -14,23 +14,27 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
 
       <div className="grid md:grid-cols-2 gap-6">
         {[1, 2, 3, 4].map((i) => (
-          <div key={i} className="bg-gray-200 rounded-lg p-4">
+          <div key={i} className="bg-gray-100 rounded-xl p-4">
             <div className="flex flex-col gap-4">
-              <div className="flex flex-col items-center sm-h-2">
-                <img 
-                  src={`/images/results/${i}before.png`} 
-                  alt={`Before Smile ${i}`} 
-                  className={`w-full ${i <= 2 ? 'h-40 md:h-48 object-contain' : 'h-64 object-cover'} rounded shadow`} 
-                />
-                <span className="text-sm mt-2 text-gray-600">Before</span>
+              <div className="flex flex-col items-center">
+                <div className="bg-white rounded-xl p-2 w-full">
+                  <img 
+                    src={`/images/results/${i}before.png`} 
+                    alt={`Before Smile ${i}`} 
+                    className="w-full min-h-[160px] md:min-h-[192px] max-h-[400px] object-contain rounded-lg" 
+                  />
+                </div>
+                <span className="text-sm mt-2 text-gray-600 font-medium">Before</span>
               </div>
               <div className="flex flex-col items-center">
-                <img 
-                  src={`/images/results/${i}after.png`} 
-                  alt={`After Smile ${i}`} 
-                  className={`w-full ${i <= 2 ? 'h-40 md:h-48 object-contain' : 'h-64 object-cover'} rounded shadow`} 
-                />
-                <span className="text-sm mt-2 text-gray-600">After</span>
+                <div className="bg-white rounded-xl p-2 w-full">
+                  <img 
+                    src={`/images/results/${i}after.png`} 
+                    alt={`After Smile ${i}`} 
+                    className="w-full min-h-[160px] md:min-h-[192px] max-h-[400px] object-contain rounded-lg" 
+                  />
+                </div>
+                <span className="text-sm mt-2 text-gray-600 font-medium">After</span>
               </div>
             </div>
           </div>
