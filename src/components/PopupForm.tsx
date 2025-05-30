@@ -23,7 +23,7 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
     };
 
     // IMPORTANT: Replace with your actual Google Apps Script Web App URL
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzzKLf4o6LUcMGYjPNnRe5mY8Mu_qKW7_b2JVEaEmiL473gd2BaBFRSbAWFpuXBH3uv/exec'; 
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby-kU0u8sOXwu6-QdhrhEww-ntlwqkbzD8SLvm6scnAiDhseQyCWEfCjuHwQkyfr2P7/exec'; 
     
     const params = new URLSearchParams(data);
     // Add a callback parameter for JSONP if your script strictly requires it, 
