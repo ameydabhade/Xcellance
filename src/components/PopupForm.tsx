@@ -8,10 +8,51 @@ interface PopupFormProps {
 }
 
 export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFormProps) {
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert('Thank you for booking your appointment! We will contact you shortly to confirm.');
-    onClose();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get('fullName') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phoneNumber') as string,
+      problem: formData.get('dentalConcern') as string, // Matches Apps Script 'problem'
+      date: formData.get('preferredDate') as string,
+      time: formData.get('preferredTime') as string,
+    };
+
+    // IMPORTANT: Replace with your actual Google Apps Script Web App URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzzKLf4o6LUcMGYjPNnRe5mY8Mu_qKW7_b2JVEaEmiL473gd2BaBFRSbAWFpuXBH3uv/exec'; 
+    
+    const params = new URLSearchParams(data);
+    // Add a callback parameter for JSONP if your script strictly requires it, 
+    // or ensure your Apps Script is deployed to allow anonymous GET requests (which often handles CORS for simple GETs).
+    // params.append('callback', 'handleGoogleAppsScriptResponse'); // Example for JSONP
+    const fullURL = `${scriptURL}?${params.toString()}`;
+
+    try {
+      const response = await fetch(fullURL, {
+        method: 'GET', 
+        // mode: 'no-cors', // Consider 'no-cors' if you don't need to read the response and face CORS issues,
+                           // but your script returns a meaningful response.
+                           // For direct fetch to work and read response, your Apps Script deployment
+                           // needs to allow access (e.g., "Execute as: Me", "Who has access: Anyone").
+      });
+
+      // Assuming the script returns JSON directly when no callback is specified in params.
+      const result = await response.json(); 
+
+      if (result.result === 'success') {
+        alert('Thank you for booking your appointment! We will contact you shortly to confirm.');
+        onClose();
+      } else {
+        alert('There was an error submitting your appointment: ' + (result.message || 'Unknown error'));
+      }
+    } catch (error) {
+      console.error('Error submitting form to Google Apps Script:', error);
+      alert('An error occurred while booking your appointment. Please try again or contact support if the issue persists.');
+    }
   };
 
   if (!isOpen) return null;
@@ -43,27 +84,27 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium mb-1">Full Name</label>
-            <input type="text" required className="w-full p-2 md:p-3 border border-gray-300 rounded-lg" />
+            <input type="text" name="fullName" required className="w-full p-2 md:p-3 border border-gray-300 rounded-lg" />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Phone Number</label>
-            <input type="tel" required className="w-full p-2 md:p-3 border border-gray-300 rounded-lg" />
+            <input type="tel" name="phoneNumber" required className="w-full p-2 md:p-3 border border-gray-300 rounded-lg" />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Email</label>
-            <input type="email" required className="w-full p-2 md:p-3 border border-gray-300 rounded-lg" />
+            <input type="email" name="email" required className="w-full p-2 md:p-3 border border-gray-300 rounded-lg" />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Describe Your Dental Concern</label>
-            <textarea required rows={2} placeholder="Briefly describe your dental issue" className="w-full p-2 md:p-3 border border-gray-300 rounded-lg"></textarea>
+            <textarea name="dentalConcern" required rows={2} placeholder="Briefly describe your dental issue" className="w-full p-2 md:p-3 border border-gray-300 rounded-lg"></textarea>
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Preferred Date</label>
-            <input type="date" required className="w-full p-2 md:p-3 border border-gray-300 rounded-lg" />
+            <input type="date" name="preferredDate" required className="w-full p-2 md:p-3 border border-gray-300 rounded-lg" />
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Preferred Time</label>
-            <select required className="w-full p-2 md:p-3 border border-gray-300 rounded-lg">
+            <select name="preferredTime" required className="w-full p-2 md:p-3 border border-gray-300 rounded-lg">
               <option value="">Select Time Slot</option>
               <option value="morning">Morning (10:00 AM - 1:00 PM)</option>
               <option value="evening">Evening (5:00 PM - 9:00 PM)</option>
