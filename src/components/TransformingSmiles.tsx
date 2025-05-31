@@ -18,21 +18,21 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
             <div className="flex flex-col gap-4">
               <div className="flex flex-col items-center">
                 <div className="bg-white rounded-xl p-2 w-full">
-                  <img 
-                    src={`/images/results/${i}before.png`} 
-                    alt={`Before Smile ${i}`} 
+                <img 
+                  src={`/images/results/${i}before.png`} 
+                  alt={`Before Smile ${i}`} 
                     className="w-full min-h-[160px] md:min-h-[192px] max-h-[400px] object-contain rounded-lg" 
-                  />
+                />
                 </div>
                 <span className="text-sm mt-2 text-gray-600 font-medium">Before</span>
               </div>
               <div className="flex flex-col items-center">
                 <div className="bg-white rounded-xl p-2 w-full">
-                  <img 
-                    src={`/images/results/${i}after.png`} 
-                    alt={`After Smile ${i}`} 
+                <img 
+                  src={`/images/results/${i}after.png`} 
+                  alt={`After Smile ${i}`} 
                     className="w-full min-h-[160px] md:min-h-[192px] max-h-[400px] object-contain rounded-lg" 
-                  />
+                />
                 </div>
                 <span className="text-sm mt-2 text-gray-600 font-medium">After</span>
               </div>
@@ -46,22 +46,17 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
         Explore the magic of your potential new smile today!
       </p>
 
-      <div className="md:grid md:grid-cols-2 gap-6">
+      <div className="max-w-3xl mx-auto">
         <div>
-          <div className="bg-gray-200 rounded-lg h-48 md:h-64 flex items-center justify-center mb-4">
-            <span className="text-gray-500">Patient Success Video 1</span>
-          </div>
-          <button onClick={onBookAppointment} className="bg-yellow-400 text-blue-900 py-3 px-6 rounded-lg font-bold w-full mb-2">
-            Request a Call back ➤
-          </button>
-          <small className="block text-center text-gray-600">
-            Complimentary Consultation & Digital scan (Worth ₹1,000)
-          </small>
-        </div>
-
-        <div>
-          <div className="bg-gray-200 rounded-lg h-48 md:h-64 flex items-center justify-center mb-4">
-            <span className="text-gray-500">Patient Success Video 2</span>
+          <div className="bg-gray-200 rounded-xl overflow-hidden mb-4 relative" style={{ paddingBottom: '133.33%' }}>
+            <video 
+              src="/videos/1.mp4" 
+              controls
+              className="absolute inset-0 w-full h-full object-cover"
+              poster="/videos/1-thumbnail.jpg"
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
           <button onClick={onBookAppointment} className="bg-yellow-400 text-blue-900 py-3 px-6 rounded-lg font-bold w-full mb-2">
             Request a Call back ➤

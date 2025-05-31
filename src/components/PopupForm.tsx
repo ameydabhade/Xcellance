@@ -1,5 +1,7 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+
 interface PopupFormProps {
   isOpen: boolean;
   onClose: () => void;
@@ -8,6 +10,8 @@ interface PopupFormProps {
 }
 
 export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFormProps) {
+  const router = useRouter();
+  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -44,8 +48,8 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
       const result = await response.json(); 
 
       if (result.result === 'success') {
-        alert('Thank you for booking your appointment! We will contact you shortly to confirm.');
         onClose();
+        router.push('/thank-you');
       } else {
         alert('There was an error submitting your appointment: ' + (result.message || 'Unknown error'));
       }
