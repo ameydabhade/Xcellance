@@ -50,7 +50,7 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
         <div>
           <div className="bg-gray-200 rounded-xl overflow-hidden mb-4 relative" style={{ paddingBottom: '133.33%' }}>
             <video 
-              src="/videos/1.mp4" 
+              src="/videos/2.mp4" 
               controls
               className="absolute inset-0 w-full h-full object-cover"
               poster="/videos/1-thumbnail.jpg"
