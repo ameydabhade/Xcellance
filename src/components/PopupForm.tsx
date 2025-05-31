@@ -48,7 +48,7 @@ export default function PopupForm({ isOpen, onClose, minutes, seconds }: PopupFo
       const result = await response.json(); 
 
       if (result.result === 'success') {
-        onClose();
+    onClose();
         router.push('/thank-you');
       } else {
         alert('There was an error submitting your appointment: ' + (result.message || 'Unknown error'));

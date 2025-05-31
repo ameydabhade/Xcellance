@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface HeaderProps {
   onBookAppointment: () => void;
 }
@@ -7,10 +9,12 @@ export default function Header({ onBookAppointment }: HeaderProps) {
     <header className="bg-white shadow-sm p-4 md:py-6">
       <div className="text-center max-w-6xl mx-auto md:flex md:items-center md:justify-between md:text-left">
         <div className="md:flex md:items-center md:gap-8">
-          <img 
+          <Image 
             src="/images/logo.png" 
             alt="Dr. Rudagi's Dental Centre of Excellence Logo" 
-            className="w-48 h-auto mx-auto mb-4 md:mb-0 md:mx-0"
+            width={192}
+            height={48}
+            className="h-auto mx-auto mb-4 md:mb-0 md:mx-0"
           />
           <p className="text-sm text-blue-600 mb-4 md:mb-0">
             📍 Shop 43, First Floor, Kohinoor Grandeur, Mukai Chowk, Ravet, Pimpri 412101

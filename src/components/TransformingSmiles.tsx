@@ -22,11 +22,11 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
                 <div className="bg-white rounded-xl p-2 w-full">
                   <div className="relative w-full min-h-[160px] md:min-h-[192px] max-h-[400px]">
                     <Image 
-                      src={`/images/results/${i}before.png`} 
-                      alt={`Before Smile ${i}`} 
+                  src={`/images/results/${i}before.png`} 
+                  alt={`Before Smile ${i}`} 
                       fill
                       className="object-contain rounded-lg"
-                    />
+                />
                   </div>
                 </div>
                 <span className="text-sm mt-2 text-gray-600 font-medium">Before</span>
@@ -35,11 +35,11 @@ export default function TransformingSmiles({ onBookAppointment }: TransformingSm
                 <div className="bg-white rounded-xl p-2 w-full">
                   <div className="relative w-full min-h-[160px] md:min-h-[192px] max-h-[400px]">
                     <Image 
-                      src={`/images/results/${i}after.png`} 
-                      alt={`After Smile ${i}`} 
+                  src={`/images/results/${i}after.png`} 
+                  alt={`After Smile ${i}`} 
                       fill
                       className="object-contain rounded-lg"
-                    />
+                />
                   </div>
                 </div>
                 <span className="text-sm mt-2 text-gray-600 font-medium">After</span>
